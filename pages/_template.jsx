@@ -21,7 +21,7 @@ module.exports = React.createClass({
             marginBottom: rhythm(1),
           }}
           style={{
-            background: 'lightgray',
+            background: '#252525'
           }}
         >
           <Container
@@ -34,11 +34,11 @@ module.exports = React.createClass({
             <Link
               to={prefixLink('/')}
               style={{
-                color: 'black',
+                color: 'white',
                 textDecoration: 'none',
               }}
             >
-              Gatsby!!!
+              Your Brand!
             </Link>
           </Container>
         </Headroom>

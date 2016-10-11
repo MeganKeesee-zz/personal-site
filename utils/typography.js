@@ -20,9 +20,18 @@ const options = {
         '700',
       ],
     },
+    {
+      name: 'Roboto',
+      styles: [
+        '100',
+        '300',
+        '400',
+        '700'
+      ]
+    }
   ],
-  headerFontFamily: ['Montserrat', 'sans-serif'],
-  bodyFontFamily: ['Arvo', 'sans-serif'],
+  headerFontFamily: ['Roboto', 'sans-serif'],
+  bodyFontFamily: ['Roboto', 'sans-serif'],
   baseFontSize: '18px',
   baseLineHeight: 1.65,
   scale: 2.25,

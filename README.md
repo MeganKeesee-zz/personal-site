@@ -1,7 +1,10 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Clean Start
+---
+#### The plain and simple starter.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+# Installation
+---
+Install this starter (assuming Gatsby is installed) by running from your CLI: 
 ```
-gatsby new gatsby-example-site
+gatsby new clean gh:brianstone/gatsby-starter-clean
 ```

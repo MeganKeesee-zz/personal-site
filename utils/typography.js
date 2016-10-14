@@ -7,25 +7,10 @@ import CodePlugin from 'typography-plugin-code'
 const options = {
   googleFonts: [
     {
-      name: 'Montserrat',
-      styles: [
-        '700',
-      ],
-    },
-    {
-      name: 'Arvo',
-      styles: [
-        '400',
-        '400i',
-        '700',
-      ],
-    },
-    {
       name: 'Roboto',
       styles: [
-        '100',
-        '300',
         '400',
+        '400i',        
         '700'
       ]
     }

@@ -1,6 +1,6 @@
 backend:
   name: github
-  owner-name: zaneriley/megan
+  repo: zaneriley/megan
   branch: master
 
 media_folder: "assets/images"

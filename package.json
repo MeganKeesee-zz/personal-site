@@ -25,6 +25,7 @@
     "typography-plugin-code": "^0.13.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "gh-pages": "^0.11.0"
   },
   "keywords": [
@@ -33,7 +34,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp pages/admin/config.yml public/admin",
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"

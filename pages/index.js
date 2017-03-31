@@ -16,9 +16,9 @@ export default class Index extends React.Component {
           ]}
         />
         <h1>
-          Hello World!
+          Megan Keesee
         </h1>
-        <p>Welcome to your new clean Gatsby site</p>
+        <p>Communications specialist.</p>
       </div>
     )
   }

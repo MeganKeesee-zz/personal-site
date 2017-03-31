@@ -2,5 +2,6 @@ backend:
   name: github
   owner-name: zaneriley/megan
   branch: master
-  publish_mode: editorial_workflow
-  media_folder: "assets/images"
+  
+publish_mode: editorial_workflow
+media_folder: "assets/images"

@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: zaneriley/megan
+  repo: megankeesee/personal-site
   branch: master
 
 media_folder: "assets/images"

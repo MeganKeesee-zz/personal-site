@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Zane Riley <zaneriley@gmail.com>",
   "dependencies": {
+    "fontfaceobserver": "^2.0.9",
     "front-matter": "^2.0.7",
     "gatsby": "^0.12.6",
     "highlight.js": "^9.6.0",
@@ -16,8 +17,8 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sub": "^1.0.0",
     "object-assign": "^4.1.0",
-    "react-helmet": "^3.1.0",
     "react-headroom": "^2.1.2",
+    "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.3",
     "react-typography": "^0.12.0",
     "toml-js": "0.0.8",

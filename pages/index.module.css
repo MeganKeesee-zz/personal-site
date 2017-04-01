@@ -1,0 +1,23 @@
+
+.homename {
+  margin-top: -2.728rem;
+  font-size: 10rem;
+  line-height: 0.76;
+}
+
+.given,
+.surname {
+  display: inline-block;
+}
+
+.surname {
+  text-indent: 0.425em;
+  margin-top: 0;
+}
+
+.portrait {
+  margin-top: 0;
+  width: calc(99.99% * 4/12 + 1.364rem);
+  transform: translate(-1.364rem, 5.456rem);
+  z-index: -1;
+}

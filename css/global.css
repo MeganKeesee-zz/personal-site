@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'GT Sectra Display';
+  src: url(../assets/fonts/GT-Sectra-Display-Super-Italic.woff) format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+:root {
+  --gutter: 1.364rem;
+}
+
+* {
+  margin: 0;
+}
+
+* + * {
+  margin-top: var(--gutter);
+}
+
+html {
+  font-size: 1.375em;
+  line-height: 1.364;
+  line-height
+  font-family: "NeuzitGroTot";
+  font-kerning: normal;
+  background-image: linear-gradient(99deg, #FFEFEF 0%, #FFFEEF 100%);
+}
+
+html,
+body {
+  margin-top: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "GT Sectra Display", Georgia, Serif;
+  font-style: italic;
+  font-weight: 900;
+}

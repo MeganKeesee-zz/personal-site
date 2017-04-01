@@ -3,52 +3,31 @@ import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
-import '../css/markdown-styles'
-
-import { rhythm } from '../utils/typography'
+import '../css/global'
 
 module.exports = React.createClass({
+
   propTypes () {
     return {
       children: React.PropTypes.any,
     }
   },
   render () {
+    const FontFaceObserver = require('fontfaceobserver');
+
+    // Observe loading of Sectra
+    const sectra = new FontFaceObserver('GT Sectra Display', {});
+
+    // When Sectra is loaded, add a font-family using Open Sans to the body
+    sectra.load().then(() => {
+      document.body.classList.add('wfLoadedSectra');
+    }, () => {
+      document.body.classList.remove('wfLoadedSectra');
+    });
+
     return (
       <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-          style={{
-            background: '#252525'
-          }}
-        >
-          <Container
-            style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Your Brand!
-            </Link>
-          </Container>
-        </Headroom>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
+        <Container>
           {this.props.children}
         </Container>
       </div>

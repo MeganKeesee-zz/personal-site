@@ -1,0 +1,36 @@
+@import '../../utils/vars.css';
+
+.container {
+
+  & > * {
+    width: 100%;
+    margin-top: var(--spacing-smallest);
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 620px) {
+    justify-content: space-around;
+
+    & > * {
+      width: calc(99% * 6/12);
+      margin-top: var(--spacing-smaller);
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    justify-content: space-between;
+    margin-top: calc(var(--spacing-smaller) * -1);
+    margin-left: calc(var(--gutter) * -1);
+
+    & > * {
+      width: initial;
+      margin-top: var(--spacing-small);
+      margin-left: var(--gutter);
+      text-align: center;
+    }
+  }
+}

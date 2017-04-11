@@ -1,0 +1,7 @@
+@import '../../utils/vars.css';
+
+.external {
+  font-weight: 900;
+  color: var(--color-link);
+  text-decoration: none;
+}

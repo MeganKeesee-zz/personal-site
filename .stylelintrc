@@ -1,6 +1,5 @@
 {
   "processors": [
-    "stylelint-processor-styled-components"
   ],
   
   "syntax": "scss",
@@ -74,9 +73,6 @@
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
     "declaration-no-important": true,
-    "declaration-property-value-whitelist": { 
-      "transition": ["transform", "opacity"]
-    },
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
     "declaration-block-semicolon-newline-after": "always",

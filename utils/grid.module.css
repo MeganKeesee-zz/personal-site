@@ -1,0 +1,246 @@
+@import './vars.css';
+
+/* Take margin off everything */
+* {
+  margin: 0;
+}
+
+/* Then add single-direction spacing between any two elements */
+* + * {
+  margin-top: var(--spacing-normal);
+}
+
+/* Finally, we need padding around the bottom of the page.
+ * This is the only exception to our single-direction spacing convention.*/
+/* stylelint-disable property-blacklist */
+[data-reactroot] > * {
+  padding-bottom: var(--spacing-smaller);
+  /* stylelint-enable property-blacklist */
+}
+
+* + .marginTopSmallest {
+  margin-top: var(--spacing-smallest);
+}
+
+* + .marginTopSmaller {
+  margin-top: var(--spacing-smaller);
+}
+
+* + .marginTopSmall {
+  margin-top: var(--spacing-small);
+}
+
+* + .marginTopLarge {
+  margin-top: var(--spacing-large);
+}
+
+* + .noMarginTop {
+  margin-top: 0;
+}
+
+/* stylelint-disable selector-max-compound-selectors */
+.marginLeftSmall > * + * {
+  margin-top: 0;
+  margin-left: var(--spacing-small);
+/* stylelint-enable */
+}
+
+/* stylelint-disable selector-max-compound-selectors */
+.marginLeft > * + * {
+  margin-top: 0;
+  margin-left: var(--gutter);
+/* stylelint-enable */
+}
+
+:global(h4 + *),
+:global(.h4 + *) {
+  margin-top: var(--spacing-small);
+}
+
+/* Certain type elements have such large text boxes that 
+ * we need to optically adjust our spacing so it's 
+ * equal with boxed elements and smaller type sizes */
+
+:global(h4 + h3),
+:global(.h4 + h3) {
+  margin-top: calc(var(--spacing-small) - var(--cap-height));
+}
+
+p + p {
+  margin-top: var(--spacing-small);
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+
+  @media (--small-bp) {
+
+    & > * {
+      margin-top: 0;
+    }
+  }
+}
+
+.flexEnd {
+  align-items: flex-end;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+* + .flexChildHack {
+  width: 25%;
+  margin: 0 !important;
+}
+
+.noOrphan {
+  white-space: nowrap;
+}
+
+section + section {
+  margin-top: var(--spacing-large);
+}
+
+section + footer {
+  /* Optically compensating for svg images with large containers */
+  margin-top: calc(var(--spacing-large) - 1rem);
+}
+
+@media (--medium-bp-max) {
+
+  * + .marginTopLargeM {
+    margin-top: var(--spacing-large);
+  }
+}
+
+@media (--small-bp) {
+
+  .g1s {
+    width: calc(99.99% * 1/12 - (var(--gutter) - var(--gutter) * 1/12));
+  }
+
+  .g3s {
+    width: calc(99.99% * 3/12 - (var(--gutter) - var(--gutter) * 3/12));
+  }
+
+  .g4s {
+    width: calc(99.99% * 4/12 - (var(--gutter) - var(--gutter) * 4/12));
+  }
+
+  .g5s {
+    width: calc(99.99% * 5/12 - (var(--gutter) - var(--gutter) * 5/12));
+  }
+
+  .g6s {
+    width: calc(99.99% * 6/12 - (var(--gutter) - var(--gutter) * 6/12));
+  }
+
+  .g8s {
+    width: calc(99.99% * 8/12 - (var(--gutter) - var(--gutter) * 8/12));
+  }
+
+  .g9s {
+    width: calc(99.99% * 9/12 - (var(--gutter) - var(--gutter) * 9/12));
+  }
+
+  .g10s {
+    width: calc(99.99% * 10/12 - (var(--gutter) - var(--gutter) * 10/12));
+  }
+
+  .g12s {
+    width: 100%;
+  }
+}
+
+@media (--medium-bp) {
+
+  .g3m {
+    width: calc(99.99% * 3/12 - (var(--gutter) - var(--gutter) * 3/12));
+  }
+
+  .g4m {
+    width: calc(99.99% * 4/12 - (var(--gutter) - var(--gutter) * 4/12));
+  }
+
+  .g5m {
+    width: calc(99.99% * 5/12 - (var(--gutter) - var(--gutter) * 5/12));
+  }
+
+  .g6m {
+    width: calc(99.99% * 6/12 - (var(--gutter) - var(--gutter) * 6/12));
+  }
+
+  .g7m {
+    width: calc(99.99% * 7/12 - (var(--gutter) - var(--gutter) * 7/12));
+  }
+
+  .g8m {
+    width: calc(99.99% * 8/12 - (var(--gutter) - var(--gutter) * 8/12));
+  }
+
+  .g9m {
+    width: calc(99.99% * 9/12 - (var(--gutter) - var(--gutter) * 9/12));
+  }
+
+  .g10m {
+    width: calc(99.99% * 10/12 - (var(--gutter) - var(--gutter) * 10/12));
+  }
+
+  .g12m {
+    width: 100%;
+  }
+}
+
+@media (--large-bp) {
+
+  .g3l {
+    width: calc(99.99% * 3/12 - (var(--gutter) - var(--gutter) * 3/12));
+  }
+
+  .g4l {
+    width: calc(99.99% * 4/12 - (var(--gutter) - var(--gutter) * 4/12));
+  }
+
+  .g5l {
+    width: calc(99.99% * 5/12 - (var(--gutter) - var(--gutter) * 5/12));
+  }
+
+  .g6l {
+    width: calc(99.99% * 6/12 - (var(--gutter) - var(--gutter) * 6/12));
+  }
+
+  .g7l {
+    width: calc(99.99% * 7/12 - (var(--gutter) - var(--gutter) * 7/12));
+  }
+
+  .g8l {
+    width: calc(99.99% * 8/12 - (var(--gutter) - var(--gutter) * 8/12));
+  }
+
+  .g9l {
+    width: calc(99.99% * 9/12 - (var(--gutter) - var(--gutter) * 9/12));
+  }
+
+  .g10l {
+    width: calc(99.99% * 10/12 - (var(--gutter) - var(--gutter) * 10/12));
+  }
+
+  .g12l {
+    width: 100%;
+  }
+}
+
+.maxWidth {
+  position: relative;
+  max-width: var(--max-width);
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+  @media (--large-bp) {
+    width: calc(100% - var(--gutter) * 2);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

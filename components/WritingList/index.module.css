@@ -1,0 +1,34 @@
+@import '../../utils/vars.css';
+
+.writingItem {
+
+  &:hover {
+
+    & .border::after {
+       background-image: linear-gradient(225deg, var(--color-highlight-start) 0%, var(--color-highlight-end) 100%);
+    }
+  }
+}
+
+.border {
+  position: relative;
+  font-weight: 800;
+
+  &::after {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.364em;
+    border-radius: 1em;
+    background-image: linear-gradient(-225deg, var(--color-highlight-start) 0%, var(--color-highlight-end) 100%);
+    content: '';
+    z-index: -1;
+  }
+}
+
+.byline {
+  font-family: var(--font-family-serif);
+}

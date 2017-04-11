@@ -1,0 +1,77 @@
+@import '../../utils/vars.css';
+
+.button {
+  display: inline-block;
+  position: relative;
+  /* Avoiding half pixels on border, so not setting the padding in REM. */
+  /* stylelint-disable unit-blacklist */
+  padding: 4px;
+  /* stylelint-enable unit-blacklist */
+  clip: rect(0, 0, 0, 0);
+  border-radius: 0.409em;
+  color: inherit;
+  font-family: var(--font-family-sans-serif);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing);
+  cursor: pointer;
+  overflow: hidden;
+  /* Removes the 300ms delay on touch-enabled devices. */
+  touch-action: manipulation;
+  /* Disables the selection of text on mobile so that we better reconigize a user is clicking on a link */
+  user-select: none;
+
+  &:hover {
+    
+    /* stylelint-disable selector-max-specificity */
+    &::after {
+      opacity: 1;
+    }
+    /* stylelint-enable */
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 275ms linear, opacity 300ms linear;
+    border-radius: inherit;
+    background-image: linear-gradient(-225deg, rgba(178, 174, 255, 0.45) 0%, rgba(255, 174, 255, 0.45) 100%);
+    content: '';
+    z-index: -2;
+  }
+
+  &::after {
+    background-image: linear-gradient(-90deg, rgba(178, 174, 255, 1) 0%, rgba(255, 174, 255, 1) 100%);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:active {
+    /* stylelint-disable unit-blacklist */
+    transform: translateY(1px) scale(0.99);
+    /* stylelint-enable unit-blacklist */
+  }
+}
+
+.inside {
+  display: block;
+  padding: calc(var(--spacing-smaller) + 3px) var(--spacing-smaller) var(--spacing-smaller);
+  border-radius: 0.318em;
+  background-image: linear-gradient(-150deg, var(--color-background-start) 0%, var(--color-background-end) 75%);
+  text-transform: uppercase;
+}
+
+@keyframes pulse {
+
+  to {
+    transform: scale(1.15, 1.25);
+    transition: inherit;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="887px" height="888px" viewBox="0 0 887 888" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 43 (38998) - http://www.bohemiancoding.com/sketch -->
+    <title>circle</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs>
+        <linearGradient x1="80.3698317%" y1="77.1704322%" x2="20.4766697%" y2="25.1705435%" id="linearGradient-1">
+            <stop stop-color="#FFEFEF" offset="0%"></stop>
+            <stop stop-color="#FFF4EF" offset="24.095896%"></stop>
+            <stop stop-color="#FFF4EF" offset="24.5549249%"></stop>
+            <stop stop-color="#FFF6EF" offset="38.4506537%"></stop>
+            <stop stop-color="#FFFEEF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-2" transform="translate(-237.000000, -1671.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-6" transform="translate(-337.000000, -264.000000)">
+                <path d="M1460.90579,2334.04352 C1460.90579,2583.04299 1311.32779,2823 1062.32832,2823 C813.323784,2823 574,2583.04299 574,2334.04352 C574,2085.04405 813.323784,1935 1062.32832,1935 C1311.32779,1935 1460.90579,2085.04405 1460.90579,2334.04352" id="circle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

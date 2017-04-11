@@ -1,0 +1,43 @@
+:root {
+  --spacing-large: 3.318rem;
+  --spacing-normal: 1.636rem;
+  --spacing-small: 0.818rem;
+  --spacing-smaller: 0.682rem;
+  --spacing-smallest: 0.364rem;
+  --gutter: var(--spacing-large);
+  --max-width: 65.455rem;
+  /* stylelint-disable color-no-hex */
+  --color-link: #3341d8;
+  --color-background-start: #ffefef;
+  --color-background-end: #fffeef;
+  --color-highlight-start: #b2aeff;
+  --color-highlight-end: #ffaeff;
+  /* stylelint-enable color-no-hex */
+  --font-family-display: 'GT Sectra Display', 'Georgia', serif;
+  --font-family-serif: 'GT Sectra', 'Georgia', serif;
+  --font-family-sans-serif: 'Proxima Soft', 'Arial', sans-serif;
+  --letter-spacing: 0.091em;
+  --cap-height: 0.273em;
+
+  @media (--small-bp) {
+    --spacing-large: calc(3.318rem + 2.138 * ((100vw - 22.727rem) / 31)));
+    --spacing-normal: calc(1.636rem + 1.092 * ((100vw - 22.727rem) / 31)));
+    --spacing-small: calc(0.818rem + 0.546 * ((100vw - 22.727rem) / 31)));
+    --spacing-smaller: calc(0.409rem + 0.273 * ((100vw - 22.727rem) / 31)));
+  }
+
+  @media (--large-bp) {
+    --spacing-large: 5.456rem;
+    --spacing-normal: 2.728rem;
+    --spacing-small: 1.364rem;
+    --spacing-smaller: 0.682rem;
+    --gutter: var(--spacing-normal);
+  }
+}
+
+@custom-media --small-bp (min-width: 500px);
+@custom-media --small-bp-max (max-width: 500px);
+@custom-media --medium-bp (min-width: 750px);
+@custom-media --medium-bp-max (max-width: 750px);
+@custom-media --large-bp (min-width: 1000px);
+@custom-media --large-bp-max (max-width: 1000px);

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Zane Riley <zaneriley@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.5",
     "fontfaceobserver": "^2.0.9",
     "front-matter": "^2.0.7",
     "gatsby": "^0.12.6",
@@ -27,7 +28,10 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.0.1",
-    "gh-pages": "^0.11.0"
+    "gh-pages": "^0.11.0",
+    "moment": "^2.18.1",
+    "offline-plugin": "^4.6.2",
+    "stylelint-order": "^0.4.3"
   },
   "keywords": [
     "gatsby"
@@ -35,7 +39,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build && cp pages/admin/config.yml public/admin/config.yml && cp pages/admin/index.html public/admin/index.html",
+    "build": "gatsby build && cp pages/admin/* public/admin/ && cp meta/* public/",
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"

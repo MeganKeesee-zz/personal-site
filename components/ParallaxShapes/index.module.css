@@ -1,0 +1,60 @@
+@import '../../utils/grid.module.css';
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  margin: 0;
+  z-index: -5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.first {
+  top: 0;
+  right: 0;
+  transform: translate(33%, -45%);
+  
+  @media (--large-bp) {
+    transform: translate(50%,-81%) rotate(-8deg) scale(2);
+    opacity: 0.8;
+  }
+}
+
+.second {
+  top: 0;
+  left: 0;
+  transform: translate(-40%, 62%) rotate(-20deg) scale(2.5, 1);
+
+  @media (--large-bp) {
+    transform: translate(-37%, 68%) rotate(-2deg) scaleX(2);
+    opacity: 0.9;
+  }
+}
+
+.third {
+  bottom: 12%;
+  left: -9%;
+
+  @media (--small-bp) {
+    bottom: 25%;
+    left: 0%;
+    transform: scale(1.5, 1.25);
+  }
+
+  @media (--medium-bp) {
+    right: 19%;
+    bottom: -15%;
+    transform: scale(2.5, 1) rotate(209deg);
+  }
+
+  @media (--large-bp) {
+    right: 0%;
+    bottom: -1%;
+    left: initial;
+    transform: scale(3) rotate(-550deg);
+  }
+}

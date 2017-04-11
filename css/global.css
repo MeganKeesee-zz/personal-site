@@ -1,39 +1,128 @@
+@import '../utils/vars.css';
+
 @font-face {
   font-family: 'GT Sectra Display';
-  src: url(../assets/fonts/GT-Sectra-Display-Super-Italic.woff) format('woff');
-  font-weight: 800;
+  src: url('../assets/fonts/GT-Sectra-Display-Super-Italic.woff') format('woff');
   font-style: italic;
+  font-weight: 800;
 }
 
-:root {
-  --gutter: 1.364rem;
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('../assets/fonts/GT-Sectra-Book.woff') format('woff');
+  font-weight: 300;
 }
 
-* {
-  margin: 0;
+@font-face {
+  font-family: 'GT Sectra';
+  src: url('../assets/fonts/GT-Sectra-Black.woff') format('woff');
+  font-weight: 800;
 }
 
-* + * {
-  margin-top: var(--gutter);
+@font-face {
+  font-family: 'Proxima Soft';
+  src: url('../assets/fonts/proxima-soft-light.woff') format('woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Proxima Soft';
+  src: url('../assets/fonts/proxima-soft.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Proxima Soft';
+  src: url('../assets/fonts/proxima-soft-cond-black.woff') format('woff');
+  font-weight: 800;
 }
 
 html {
-  font-size: 1.375em;
+  background-image: linear-gradient(99deg, var(--color-background-start) 0%, var(--color-background-end) 100%);
+  font-family: var(--font-family-sans-serif);
+  font-size: 1.188rem;
   line-height: 1.364;
-  line-height
-  font-family: "NeuzitGroTot";
   font-kerning: normal;
-  background-image: linear-gradient(99deg, #FFEFEF 0%, #FFFEEF 100%);
+  
+  @media (--small-bp) {
+    font-size: calc(1.188rem + 0.187 * ((100vw - 22.727rem) / 32.818));
+  }
+
+  @media (--large-bp) {
+    font-size: 1.375rem;
+  }
 }
 
 html,
 body {
-  margin-top: 0;
   min-height: 100vh;
+  margin-top: 0;
+}
+
+*::selection {
+  background-color: #f8d7f5;
 }
 
 h1 {
-  font-family: "GT Sectra Display", Georgia, Serif;
+  font-family: var(--font-family-display);
+  font-size: 2.369rem;
   font-style: italic;
   font-weight: 900;
+
+  @media (--small-bp) {
+    font-size: calc(2.369rem + 2.01 * ((100vw - 22.727rem) / 31));
+  }
+
+  @media (--large-bp) {
+    font-size: 4.379rem;
+  }
+}
+
+h2,
+h3 {
+  font-family: 'GT Sectra', 'Georgia', serif;
+  font-size: 1.333rem;
+  line-height: 1.25;
+  font-weight: 300;
+
+  & a {
+    color: var(--color-link);
+  }
+
+  @media (--small-bp) {
+    font-size: calc(1.333rem + 0.303 * ((100vw - 22.727rem) / 31));
+  }
+
+  @media (--large-bp) {
+    font-size: 1.636rem;
+  }
+}
+
+h2 {
+  font-family: var(--font-family-sans-serif);
+  font-weight: 200;
+}
+
+h3 {
+  font-family: 'GT Sectra', 'Georgia', serif;
+  font-weight: 300;
+}
+
+h4,
+.h4 {
+  font-family: var(--font-family-sans-serif);
+  font-size: inherit;
+  font-weight: 800;
+  letter-spacing: 0.091em;
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
 }

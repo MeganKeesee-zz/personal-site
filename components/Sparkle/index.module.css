@@ -1,0 +1,77 @@
+.container {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    /* stylelint-disable selector-max-specificity */
+    & .spark {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.spark {
+  position: absolute;
+  margin: 0;
+  animation: sparkle 1s infinite 400ms alternate linear;
+  opacity: 0;
+  speak: none;
+  visibility: hidden;
+  z-index: 10;
+  pointer-events: none;
+
+  &:first-of-type {
+    top: 10%;
+    left: 4%;
+    animation-delay: 0ms;
+  }
+
+  &:nth-of-type(2) {
+    right: 6%;
+    bottom: 10%;
+    animation-delay: -500ms;
+  }
+
+  &:nth-of-type(4) {
+    bottom: 24%;
+    left: -6%;
+    animation-delay: -500ms;
+  }
+
+  &:nth-of-type(5) {
+    bottom: 36%;
+    left: 55%;
+  }
+}
+
+@keyframes sparkle {
+
+  0% {
+    transform: scale(0.8);
+    opacity: 0.25;
+  }
+
+  25% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  60% {
+    opacity: 0.9;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

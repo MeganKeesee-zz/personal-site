@@ -15,6 +15,6 @@ collections:
       description: "List of articles that appear on the homepage"
       fields:
         - {label: "Publisher", name: "publisher", widget: "string"}
-        - {label: "Date Posted", name: "date", widget: "datepicker"}
+        - {label: "Date Posted", name: "date", widget: "datetime"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "url", name: "url", widget: "string"}

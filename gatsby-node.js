@@ -1,5 +1,3 @@
-const OfflinePlugin = require('offline-plugin');
-
 exports.modifyWebpackConfig = function(config, env) {
 
   config.merge({
@@ -18,8 +16,6 @@ exports.modifyWebpackConfig = function(config, env) {
     cfg.loader = 'url'
     return cfg
   })
-
-  config.plugin('offline-plugin', OfflinePlugin, []);
 
   return config
 }

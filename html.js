@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from "react-helmet";
 import { prefixLink } from 'gatsby-helpers';
-import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 const BUILD_TIME = new Date().getTime()
 
@@ -21,12 +20,6 @@ module.exports = React.createClass({
       css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
 
-    try {
-      OfflinePluginRuntime.install();
-    } catch (e) {
-      console.log(e)
-    }
-
     return (
       <html lang="en">
         <head>
@@ -39,6 +32,7 @@ module.exports = React.createClass({
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://megankesee.com" />
           <meta property="og:title" content="Megan Keesee, Communications Manager" />
+          <meta property="og:image" content="https://megankeesee.com/facebook.jpg" />
           <meta property="og:description" content="Megan Keesee is a communications manager based in San Francisco, California." />
           <meta property="og:site_name" content="Megan Keesee, Communications Manager" />
           <meta property="og:locale" content="en_US" />
@@ -49,6 +43,7 @@ module.exports = React.createClass({
           <meta name="twitter:url" content="https://megankesee.com" />
           <meta name="twitter:title" content="Megan Keesee, Communications Manager" />
           <meta name="twitter:description" content="Megan Keesee is a communications manager based in San Francisco, California." />
+          <meta name="twitter:image" content="https://megankeesee.com/twitter.jpg" />
 
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
@@ -59,10 +54,13 @@ module.exports = React.createClass({
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}
+
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+          <script async src="https://www.google-analytics.com/analytics.js"></script>
+          <script async src="/ga-auto.js"></script>
         </body>
       </html>
     )

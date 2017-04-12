@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Zane Riley <zaneriley@gmail.com>",
   "dependencies": {
+    "autotrack": "^2.3.2",
     "classnames": "^2.2.5",
     "fontfaceobserver": "^2.0.9",
     "front-matter": "^2.0.7",
@@ -39,7 +40,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build && cp pages/admin/* public/admin/ && cp meta/* public/",
+    "build": "gatsby build && cp pages/admin/* public/admin/ && cp meta/* public/ && cp analytics/autotrack.js public/ga-data.js",
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"

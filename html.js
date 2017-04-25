@@ -58,9 +58,16 @@ module.exports = React.createClass({
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
-          <script async src="https://www.google-analytics.com/analytics.js"></script>
-          <script async src="/ga-auto.js"></script>
+          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />  
+          <script>
+            !function(m,e,g,a,n){m.GoogleAnalyticsObject=g;m[g]||(m[g]=function(){
+            (m[g].q=m[g].q||[]).push(arguments)});m[g].l=+new Date;a=e.createElement('script');
+            n=e.scripts[0];a.src='//www.google-analytics.com/analytics.js';
+            n.parentNode.insertBefore(a,n)}(window,document,'ga');
+
+            ga('create', 'UA-97193950-1', 'auto');
+            ga('send', 'pageview');
+          </script>
         </body>
       </html>
     )
